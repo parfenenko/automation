@@ -1,6 +1,7 @@
 package tests;
 
 import framework.BaseTest;
+import javafx.scene.layout.Priority;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import pages.LoginPage;
@@ -16,8 +17,8 @@ import static org.testng.Assert.assertEquals;
 public class SickDaysTest extends BaseTest {
 
     //        Test data
-    String login = "";
-    String password = "";
+    String login = "payu";
+    String password = "Qwerty12345";
     int currentCountOfTotalVacationsDays;
     int expectedCountOfTotalVacationsDays = 10;
 
@@ -32,7 +33,7 @@ public class SickDaysTest extends BaseTest {
         closeBrowser();
     }
 
-    @Test
+    @Test(priority = 2, enabled = true)
     public void verifyAmountOfSickDaysByUser() {
 
 

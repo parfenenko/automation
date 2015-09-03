@@ -8,11 +8,16 @@ import org.openqa.selenium.By;
  */
 public class RoomBookingPage extends BasePage {
 
+    public RoomBookingPage(){
+        waitPageLoaded(Locators.PAGE_LOCATOR, 10, "RoomBookingPage");
+    }
+
     public void openNewBookingWindow() {
         clickOn(Locators.NEW_BOOKING_BUTTON);
     }
 
     public interface Locators{
         By NEW_BOOKING_BUTTON = By.xpath("//a[contains(.,'New Booking')]");
+        By PAGE_LOCATOR = By.xpath("//span[contains(.,'   Room and Inventory Booking ')]");
     }
 }

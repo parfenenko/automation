@@ -8,6 +8,10 @@ import org.openqa.selenium.By;
  */
 public class NewBookingPage extends BasePage {
 
+    public NewBookingPage(){
+        waitPageLoaded(Locators.NEW_BOOKING_PAGE_LOCATOR, 5, "NewBookingPage");
+    }
+
     public void verifyPopup() {
         isOnPage(Locators.BOOK_ITEM_FIELD);
         isOnPage(Locators.SUBMIT_BUTTON);
@@ -16,5 +20,6 @@ public class NewBookingPage extends BasePage {
     public interface Locators {
         By BOOK_ITEM_FIELD = By.xpath("//label[contains(.,'Book item')]");
         By SUBMIT_BUTTON = By.xpath("//button[contains(.,'Submit')]");
+        By NEW_BOOKING_PAGE_LOCATOR = By.xpath("//label[contains(.,'Date')]");
     }
 }

@@ -19,21 +19,6 @@ import static junit.framework.Assert.assertEquals;
  */
 public class BaseTest {
 
-//        private WebDriver driver;
-//        public WebDriver getDriver() {
-//            return driver;
-//        }
-//
-//        public void openBrowser() {
-//            WebDriver driver = new FirefoxDriver();
-//            driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-//            driver.get("http://level2.ciklum.net/index.php");
-//        }
-//
-//        public void closeBrowser() {
-//            driver.quit();
-//        }
-
     public void openBrowser() {
         String browserName = System.getProperty("browser");
         WebDriver driver = DriverFactory.createInstance(browserName);

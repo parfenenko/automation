@@ -11,7 +11,7 @@ import org.openqa.selenium.WebElement;
 public class LoginPage extends BasePage {
 
     public LoginPage(){
-        waitPageLoaded(Locators.LOGIN_FIELD, 5, "Login Page");
+        waitPageLoaded(Locators.PAGE_LOCATOR, 5, "Login Page");
     }
 
     String mainUrl = "http://level2.ciklum.net/index.php";
@@ -29,6 +29,6 @@ public class LoginPage extends BasePage {
         By LOGIN_FIELD = By.cssSelector("#mod_login_username");
         By PASSWORD_FIELD = By.cssSelector("#mod_login_password");
         By LOGIN_BUTTON = By.xpath("//input[@name='Submit']");
-        By PAGE_LOCATOR = By.cssSelector("#mod_login_username");
+        By PAGE_LOCATOR = By.xpath("//a[contains(.,'Home')]");
     }
 }

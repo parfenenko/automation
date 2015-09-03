@@ -8,20 +8,21 @@ import org.openqa.selenium.By;
  */
 public class SickDaysAndVacationsPage extends BasePage {
 
+    public SickDaysAndVacationsPage(){
+        waitPageLoaded(Locators.PAGE_LOCATOR, 5, "SickDaysAndVacationsPage");
+    }
+
     public void selectUserByName(String linkText) {
         By LINK = (By.xpath(String.format(Locators.GENERAL_LINK_USER_NAVIGATE_XPATH, linkText)));
-        waitPageLoaded(Locators.COUNT_OF_TOTAL_VACATION_DAYS, 30000, "Error");
         $(LINK).click();
     }
 
     public int getCountOfTotalVacationsDays() {
-        waitPageLoaded(Locators.PAGE_LOCATOR, 3000, "Error");
         int count_of_vacation_days_allowed_to_take = Integer.parseInt($(Locators.COUNT_OF_TOTAL_VACATION_DAYS).getText());
         return count_of_vacation_days_allowed_to_take;
     }
 
     public void selectDate(String date) {
-        waitPageLoaded(Locators.PAGE_LOCATOR, 3000, "Error");
         inputText(Locators.END_DATE, date);
         $(Locators.SHOW_BUTTON).click();
     }

@@ -1,4 +1,5 @@
 package framework;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -27,7 +28,6 @@ public class BasePage {
     }
 
     public static void clickOn(By locator) {
-
         $(locator).click();
     }
 
@@ -48,7 +48,7 @@ public class BasePage {
     public static void waitPageLoaded(By locator, int timeout, String assertionMessage) {
         int counter = 0;
         boolean displayed = false;
-        while (counter != timeout && displayed != true) {
+        while (counter != timeout && displayed == false) {
             try {
                 displayed = $(locator).isDisplayed();
             } catch (Exception e) {
@@ -57,11 +57,11 @@ public class BasePage {
             }
         }
         if (!displayed) {
-            throw new AssertionError("'" + assertionMessage + "' page object was loaded in " + timeout + " seconds!");
+            throw new AssertionError("'" + assertionMessage + "' page object was loaded in " + String.valueOf(timeout) + " seconds!");
         }
     }
 
-    public static boolean isOnPage(By locator){
+    public static boolean isOnPage(By locator) {
         return $(locator).isDisplayed();
     }
 }
