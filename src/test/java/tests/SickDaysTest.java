@@ -17,8 +17,8 @@ import static org.testng.Assert.assertEquals;
 public class SickDaysTest extends BaseTest {
 
     //        Test data
-    String login = "payu";
-    String password = "Qwerty12345";
+    String login = "";
+    String password = "";
     int currentCountOfTotalVacationsDays;
     int expectedCountOfTotalVacationsDays = 10;
 
