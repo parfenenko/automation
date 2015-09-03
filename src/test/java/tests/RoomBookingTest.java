@@ -17,8 +17,8 @@ import static org.testng.Assert.assertEquals;
 public class RoomBookingTest extends BaseTest {
 
     //        Test data
-    String login = "payu";
-    String password = "Qwerty12345";
+    String login = "";
+    String password = "";
 
     @BeforeTest
     public void openLoginPage() {

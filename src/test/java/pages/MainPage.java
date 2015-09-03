@@ -9,18 +9,6 @@ import org.openqa.selenium.WebDriver;
  */
 public class MainPage extends BasePage{
 
-    private WebDriver driver;
-
-    public WebDriver getDriver() {
-        return driver;
-    }
-
-//    public SickDaysAndVacationsPage clickLinkSickDays(String linkText) {
-//        By LINK = (By.xpath(String.format(Locators.GENERAL_LINK_DIRECTORY_NAVIGATE_XPATH, linkText)));
-//        clickOn(LINK);
-//        return new SickDaysAndVacationsPage();
-//    }
-
     public void navigateToPage(String linkText){
         By LINK = (By.xpath(String.format(Locators.GENERAL_LINK_DIRECTORY_NAVIGATE_XPATH, linkText)));
         clickOn(LINK);
