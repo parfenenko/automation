@@ -15,8 +15,8 @@ public class LoginPage extends BasePage {
     }
 
     String mainUrl = "http://level2.ciklum.net/index.php";
-    String login = "payu";
-    String password = "Qwerty12345";
+    String login = "";
+    String password = "";
 
     public MainPage login(String login, String password){
         inputText(Locators.LOGIN_FIELD, login);
