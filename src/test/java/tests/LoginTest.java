@@ -3,19 +3,21 @@ package tests;
 import framework.BaseTest;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pages.LoginPage;
-import pages.MainPage;
-import pages.NewBookingPage;
-import pages.RoomBookingPage;
-
 
 /**
- * Created by payu on 9/3/2015.
+ * Created by payu on 9/4/2015.
  */
-public class RoomBookingTest extends BaseTest {
+public class LoginTest extends BaseTest {
 
     //        Test data
+        @DataProvider
+    private static final Object[][] loginData() {
+        return new Object[][]{
+                {"payu", "Qwerty12345"}};
+    }
 
     @BeforeTest
     public void openLoginPage() {
@@ -28,18 +30,12 @@ public class RoomBookingTest extends BaseTest {
         closeBrowser();
     }
 
-    @Test
-    public void verifyCalendar() {
+    @Test(dataProvider = "loginData")
+    public void loginFormValidation(String login, String password) {
 
 
 //         Test steps
         LoginPage loginPage = new LoginPage();
         loginPage.login(login, password);
-        MainPage mainPage = new MainPage();
-        mainPage.navigateToPage("Room Booking");
-        RoomBookingPage roomBookingPage = new RoomBookingPage();
-        roomBookingPage.openNewBookingWindow();
-        NewBookingPage newBookingPage = new NewBookingPage();
-        newBookingPage.verifyPopup();
     }
 }

@@ -2,7 +2,6 @@ package pages;
 
 import framework.BasePage;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 
 /**
  * Created by payu on 7/15/2015.
@@ -10,7 +9,7 @@ import org.openqa.selenium.WebDriver;
 public class MainPage extends BasePage{
 
     public MainPage(){
-        waitPageLoaded(Locators.MAIN_PAGE_LOCATOR, 5, "MainPage");
+        waitPageLoaded(Locators.MAIN_PAGE_LOCATOR, 10, "MainPage");
     }
 
     public void navigateToPage(String linkText){

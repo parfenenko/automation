@@ -14,10 +14,6 @@ public class LoginPage extends BasePage {
         waitPageLoaded(Locators.PAGE_LOCATOR, 5, "Login Page");
     }
 
-    String mainUrl = "http://level2.ciklum.net/index.php";
-    String login = "";
-    String password = "";
-
     public MainPage login(String login, String password){
         inputText(Locators.LOGIN_FIELD, login);
         inputText(Locators.PASSWORD_FIELD, password);

@@ -13,6 +13,7 @@ public class RoomBookingPage extends BasePage {
     }
 
     public void openNewBookingWindow() {
+        waitUntilElementLoaded(Locators.NEW_BOOKING_BUTTON, 5, "NEW_BOOKING_BUTTON");
         clickOn(Locators.NEW_BOOKING_BUTTON);
     }
 

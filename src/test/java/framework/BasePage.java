@@ -12,6 +12,7 @@ import pages.MainPage;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -42,6 +43,15 @@ public class BasePage {
             Thread.currentThread().sleep(milliseconds);
         } catch (InterruptedException e) {
             e.printStackTrace();
+        }
+    }
+
+    public static void waitUntilElementLoaded(By locator, int timeout, String assertionMessage){
+        boolean present;
+        try {
+            present = $(locator).isDisplayed();
+        } catch (NoSuchElementException e) {
+            present = false;
         }
     }
 

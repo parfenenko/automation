@@ -19,6 +19,9 @@ import static junit.framework.Assert.assertEquals;
  */
 public class BaseTest {
 
+    public static String login = "";
+    public static String password = "";
+
     public void openBrowser() {
         String browserName = System.getProperty("browser");
         WebDriver driver = DriverFactory.createInstance(browserName);
@@ -32,7 +35,7 @@ public class BaseTest {
         }
     }
 
-    public static void open(String url) {
+    public static void openPage(String url) {
         DriverManager.getDriver().get(url);
     }
 

@@ -1,13 +1,15 @@
 package tests;
 
 import framework.BaseTest;
-import javafx.scene.layout.Priority;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
 import pages.LoginPage;
 import org.testng.annotations.Test;
 import pages.MainPage;
 import pages.SickDaysAndVacationsPage;
+
+import java.util.Objects;
 
 import static org.testng.Assert.assertEquals;
 
@@ -17,15 +19,13 @@ import static org.testng.Assert.assertEquals;
 public class SickDaysTest extends BaseTest {
 
     //        Test data
-    String login = "";
-    String password = "";
     int currentCountOfTotalVacationsDays;
     int expectedCountOfTotalVacationsDays = 10;
 
     @BeforeTest
     public void openLoginPage() {
         openBrowser();
-        open("http://level2.ciklum.net/index.php");
+        openPage("http://level2.ciklum.net/index.php");
     }
 
     @AfterTest
