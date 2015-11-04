@@ -1,10 +1,13 @@
 package tests;
 
 import framework.BaseTest;
+import org.apache.xpath.operations.String;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import pages.CheckoutPage;
 import pages.NotusHomePage;
+import pages.PreviewCartPage;
 import pages.SubCategoryPage;
 
 import java.util.List;
@@ -58,15 +61,12 @@ public class NotusIpadSearchTest extends BaseTest {
         }
     }
 
-//    @Test(priority = 3)
-//    public void verifyProductNameInTheCart(){
-//        PreviewCartPage previewCartPage = subCategory.addProductToCart(productName);
-//
-//        assertEquals(previewCartPage.getProductName(), productName);
-//
-//        CheckoutPage checkoutPage = previewCartPage.submitOrderButton();
-//
-//        assertEquals(checkoutPage.getProductName(), productName);
-//
-//    }
+    @Test(priority = 3)
+    public void verifyProductNameInTheCart(){
+        PreviewCartPage previewCartPage = subCategoryPage.addProductToCart(productName);
+        assertEquals(previewCartPage.getProductName(), productName);
+        CheckoutPage checkoutPage = previewCartPage.submitOrderButton();
+        assertEquals(checkoutPage.getProductName(), productName);
+
+    }
 }
