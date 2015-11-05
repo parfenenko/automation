@@ -1,16 +1,5 @@
 package framework;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
-import pages.LoginPage;
-
-import java.io.IOException;
-import java.util.concurrent.TimeUnit;
 
 import static junit.framework.Assert.assertEquals;
 
