@@ -2,51 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e1a6591-697e-4676-aa9b-3a3be7969b87" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_api_2_47_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_chrome_driver_2_47_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_edge_driver_2_47_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_firefox_driver_2_47_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_htmlunit_driver_2_47_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_ie_driver_2_47_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_java_2_47_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_leg_rc_2_47_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_remote_driver_2_47_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_safari_driver_2_47_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_support_2_47_1.xml" />
-      <change type="DELETED" beforePath="D:\j.parfenenko\Automation\automation\.idea\libraries\Maven__junit_junit_3_8_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\j.parfenenko\Automation\automation\.idea\libraries\Maven__org_seleniumhq_selenium_selenium_api_2_46_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\j.parfenenko\Automation\automation\.idea\libraries\Maven__org_seleniumhq_selenium_selenium_chrome_driver_2_46_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\j.parfenenko\Automation\automation\.idea\libraries\Maven__org_seleniumhq_selenium_selenium_firefox_driver_2_46_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\j.parfenenko\Automation\automation\.idea\libraries\Maven__org_seleniumhq_selenium_selenium_htmlunit_driver_2_46_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\j.parfenenko\Automation\automation\.idea\libraries\Maven__org_seleniumhq_selenium_selenium_ie_driver_2_46_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\j.parfenenko\Automation\automation\.idea\libraries\Maven__org_seleniumhq_selenium_selenium_java_2_46_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\j.parfenenko\Automation\automation\.idea\libraries\Maven__org_seleniumhq_selenium_selenium_leg_rc_2_46_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\j.parfenenko\Automation\automation\.idea\libraries\Maven__org_seleniumhq_selenium_selenium_remote_driver_2_46_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\j.parfenenko\Automation\automation\.idea\libraries\Maven__org_seleniumhq_selenium_selenium_safari_driver_2_46_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\j.parfenenko\Automation\automation\.idea\libraries\Maven__org_seleniumhq_selenium_selenium_support_2_46_0.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/framework/BasePage.java" afterPath="$PROJECT_DIR$/src/test/java/framework/BasePage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/framework/BaseTest.java" afterPath="$PROJECT_DIR$/src/test/java/framework/BaseTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Learning.iml" afterPath="$PROJECT_DIR$/Learning.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="DELETED" beforePath="D:\j.parfenenko\Automation\automation\src\test\java\rabota\LoginPage.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\j.parfenenko\Automation\automation\src\test\java\rabota\NotusHomePage.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\j.parfenenko\Automation\automation\src\test\java\rabota\RoomBookingPage.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\j.parfenenko\Automation\automation\src\test\java\rabota\SickDaysAndVacationsPage.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\j.parfenenko\Automation\automation\src\test\java\rabota\SubCategoryPage.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\j.parfenenko\Automation\automation\src\test\java\rabota\tests\LoginTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\j.parfenenko\Automation\automation\src\test\java\rabota\tests\NotusIpadSearchTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\j.parfenenko\Automation\automation\src\test\java\rabota\tests\RoomBookingTest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\j.parfenenko\Automation\automation\src\test\java\rabota\tests\SickDaysTest.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\j.parfenenko\Automation\automation\src\test\java\pages\LoginPage.java" afterPath="$PROJECT_DIR$/src/test/java/rabota/LoginPage.java" />
-      <change type="MOVED" beforePath="D:\j.parfenenko\Automation\automation\src\test\java\pages\MainPage.java" afterPath="$PROJECT_DIR$/src/test/java/rabota/MainPage.java" />
-      <change type="MOVED" beforePath="D:\j.parfenenko\Automation\automation\src\test\java\pages\NewBookingPage.java" afterPath="$PROJECT_DIR$/src/test/java/rabota/NewBookingPage.java" />
-      <change type="MOVED" beforePath="D:\j.parfenenko\Automation\automation\src\test\java\pages\NotusHomePage.java" afterPath="$PROJECT_DIR$/src/test/java/rabota/NotusHomePage.java" />
-      <change type="MOVED" beforePath="D:\j.parfenenko\Automation\automation\src\test\java\pages\RoomBookingPage.java" afterPath="$PROJECT_DIR$/src/test/java/rabota/RoomBookingPage.java" />
-      <change type="MOVED" beforePath="D:\j.parfenenko\Automation\automation\src\test\java\pages\SickDaysAndVacationsPage.java" afterPath="$PROJECT_DIR$/src/test/java/rabota/SickDaysAndVacationsPage.java" />
-      <change type="MOVED" beforePath="D:\j.parfenenko\Automation\automation\src\test\java\pages\SubCategoryPage.java" afterPath="$PROJECT_DIR$/src/test/java/rabota/SubCategoryPage.java" />
-      <change type="MOVED" beforePath="D:\j.parfenenko\Automation\automation\src\test\java\tests\LoginTest.java" afterPath="$PROJECT_DIR$/src/test/java/rabota/tests/LoginTest.java" />
-      <change type="MOVED" beforePath="D:\j.parfenenko\Automation\automation\src\test\java\tests\NotusIpadSearchTest.java" afterPath="$PROJECT_DIR$/src/test/java/rabota/tests/NotusIpadSearchTest.java" />
-      <change type="MOVED" beforePath="D:\j.parfenenko\Automation\automation\src\test\java\tests\RoomBookingTest.java" afterPath="$PROJECT_DIR$/src/test/java/rabota/tests/RoomBookingTest.java" />
-      <change type="MOVED" beforePath="D:\j.parfenenko\Automation\automation\src\test\java\tests\SickDaysTest.java" afterPath="$PROJECT_DIR$/src/test/java/rabota/tests/SickDaysTest.java" />
     </list>
     <ignored path="Learning.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -71,9 +36,13 @@
       <file leaf-file-name="NotusIpadSearchTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/notus/tests/NotusIpadSearchTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.65912765">
-              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.6042003">
+              <caret line="28" column="80" selection-start-line="28" selection-start-column="80" selection-end-line="28" selection-end-column="80" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1025#1026#0" expanded="true" />
+                <element signature="e#1055#1056#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -88,11 +57,23 @@
       <projects_view />
     </option>
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/test/java/rabota/tests/NotusIpadSearchTest.java" />
+      </list>
+    </option>
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="mavenHome" value="Bundled (Maven 3)" />
       </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
     </option>
   </component>
   <component name="NamedScopeManager">
@@ -168,6 +149,10 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rabota" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -226,6 +211,54 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Learning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="automation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Learning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="automation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="level2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -470,10 +503,11 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32953367" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953367" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32995737" sideWeight="0.5" order="-1" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32953367" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -493,11 +527,60 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/test/java/rabota/PreviewCartPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19224556">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/test-classes/framework/BasePage.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#2015#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/notus/pages/SubCategoryPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19224556">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/notus/pages/PreviewCartPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19224556">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/notus/pages/CheckoutPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2746365">
+          <caret line="11" column="56" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
+          <folding>
+            <element signature="e#195#196#0" expanded="true" />
+            <element signature="e#267#268#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/notus/tests/NotusIpadSearchTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65912765">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.6042003">
+          <caret line="28" column="80" selection-start-line="28" selection-start-column="80" selection-end-line="28" selection-end-column="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1025#1026#0" expanded="true" />
+            <element signature="e#1055#1056#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
