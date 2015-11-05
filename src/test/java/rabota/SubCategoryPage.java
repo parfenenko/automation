@@ -32,6 +32,8 @@ public class SubCategoryPage extends BasePage{
 
     public void setPriceTo(int priceTo) {
         inputText(Locators.PRICE_TO_FILTER, String.valueOf(priceTo));
+        $(Locators.PRICE_FILTER_OK_BUTTON).click();
+        waitUntilElementLoaded(Locators.PRODUCT_TITLE, 5, "PRODUCT_TITLE");
     }
 
     public List<Integer> getActualPrices() {
@@ -39,11 +41,12 @@ public class SubCategoryPage extends BasePage{
         List<WebElement> priceList = $$(Locators.PRODUCT_PRICE);
         for (WebElement price : priceList) {
             String priceString = price.getText();
-            priceString = priceString.replace(" ???", "");
-            listOfPrices.add(Integer.valueOf(priceString));
-//            listOfPrices.add(Integer.valueOf(price.getText().replace(" ???", "")));
+            listOfPrices.add(Integer.valueOf(price.getText().replace(" грн", "")));
         }
         return listOfPrices;
+    }
+
+    public PreviewCartPage addProductToCart(String productName) {
     }
 
 
@@ -53,5 +56,6 @@ public class SubCategoryPage extends BasePage{
         By PAGE_LOCATOR = By.className("product_preview_filter");
         By PRICE_TO_FILTER = By.xpath(".//*[@id='search_price_to']");
         By PRODUCT_PRICE = By.xpath("//table[@class='price_active']//tr[1]//span[@class='priceUAH']");
+        By PRICE_FILTER_OK_BUTTON = By.xpath("//a[contains(.,'Оk')]");
     }
 }
