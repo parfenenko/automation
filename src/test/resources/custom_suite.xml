@@ -1,0 +1,14 @@
+<!--~
+  ~ Copyright (C) Zoomdata, Inc. 2012-2014. All rights reserved.
+  -->
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Notus Tests" verbose="2"  parallel="tests" thread-count="1">
+
+    <test name="IPad tests">
+        <classes>
+            <class name="notus.tests.NotusIpadSearchTest"/>
+        </classes>
+    </test>
+
+</suite>

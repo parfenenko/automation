@@ -3,11 +3,10 @@ package notus.pages;
 import framework.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import ru.yandex.qatools.allure.annotations.Step;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.testng.Assert.assertTrue;
 
 /**
  * Created by payu on 9/24/2015.
@@ -16,11 +15,13 @@ public class SubCategoryPage extends BasePage{
 
     public SubCategoryPage() {waitPageLoaded(Locators.PAGE_LOCATOR, 5, "SubCategoryPage");}
 
+    @Step
     public void selectModelFromFilterMenu(String linkText) {
         By LINK = (By.xpath(String.format(Locators.SUBCATEGORY_NAME, linkText)));
         clickOn(LINK);
     }
 
+    @Step
     public List<String> getListOfProductNames() {
         List<String> listOfProductTitles = new ArrayList();
         List<WebElement> productList= $$(Locators.PRODUCT_TITLE);
@@ -30,11 +31,13 @@ public class SubCategoryPage extends BasePage{
         return listOfProductTitles;
     }
 
+    @Step
     public void setPriceTo(int priceTo) {
         inputText(Locators.PRICE_TO_FILTER, String.valueOf(priceTo));
         $(Locators.SET_PRICE_FILTER_OK_BUTTON).click();
     }
 
+    @Step
     public List<Integer> getActualPrices() {
         List<Integer> listOfPrices = new ArrayList();
         List<WebElement> priceList = $$(Locators.PRODUCT_PRICE);
@@ -44,12 +47,14 @@ public class SubCategoryPage extends BasePage{
         return listOfPrices;
     }
 
+    @Step
     public PreviewCartPage clickBuyProductByName(String linkText) { // method is substituted by the clickBuyProduct because of problems with cyrillic symbols
         By LINK = (By.xpath(Locators.BUY_PRODUCT_BUTTON_BY_NAME));
         clickOn(LINK);
         return new PreviewCartPage();
     }
 
+    @Step
     public PreviewCartPage clickBuyProduct() {
         $(Locators.BUY_PRODUCT).click();
         return new PreviewCartPage();

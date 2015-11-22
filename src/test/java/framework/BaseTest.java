@@ -1,11 +1,12 @@
 package framework;
+import framework.utils.CustomListener;
 import org.openqa.selenium.WebDriver;
-
-import static junit.framework.Assert.assertEquals;
+import org.testng.annotations.Listeners;
 
 /**
  * Created by payu on 7/15/2015.
  */
+@Listeners({CustomListener.class})
 public class BaseTest {
 
     public static String login = "";
