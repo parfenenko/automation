@@ -1,6 +1,8 @@
 package framework;
 import org.openqa.selenium.WebDriver;
 
+import java.nio.charset.Charset;
+
 import static junit.framework.Assert.assertEquals;
 
 /**
@@ -30,6 +32,15 @@ public class BaseTest {
 
     public static void refreshPage() {
         DriverManager.getDriver().navigate().refresh();
+    }
+
+    private final Charset UTF8_CHARSET = Charset.forName("UTF-8");
+
+    String decodeUTF8(byte[] bytes) {
+        return new String(bytes, UTF8_CHARSET);
+    }
+    byte[] encodeUTF8(String string) {
+        return string.getBytes(UTF8_CHARSET);
     }
 
 }

@@ -1,10 +1,14 @@
 package framework;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by payu on 7/15/2015.
@@ -64,5 +68,14 @@ public class BasePage {
 
     public static boolean isOnPage(By locator) {
         return $(locator).isDisplayed();
+    }
+
+    public static WebDriver driver;
+
+    public static void mouseHover(String main) {
+        driver.get("http://rabota.ua");
+        WebElement element = driver.findElement(By.xpath(main));
+        Actions action = new Actions(driver);
+        action.moveToElement(element).build().perform();
     }
 }
