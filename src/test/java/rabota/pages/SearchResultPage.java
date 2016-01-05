@@ -3,10 +3,8 @@ package rabota.pages;
 import framework.BasePage;
 import framework.DriverManager;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,8 +17,8 @@ public class SearchResultPage extends BasePage {
         waitPageLoaded(Locators.PAGE_LOCATOR, 5, "SearchResultPage");
     }
 
-    public List<String> getVacancyTitles() {
-        List<String> vacancyTitles = new ArrayList();
+    public List<java.lang.String> getVacancyTitles() {
+        List<java.lang.String> vacancyTitles = new ArrayList();
         List<WebElement> titlesList = $$(Locators.VACANCY_TITLES);
         for (WebElement title : titlesList) {
             vacancyTitles.add(title.getText());
@@ -46,8 +44,8 @@ public class SearchResultPage extends BasePage {
         $(RabotaUaHomePage.Locators.SEARCH_BUTTON).click();
     }
 
-    public List<String> getVacancyLocations() {
-        List<String> vacancyLocations = new ArrayList();
+    public List<java.lang.String> getVacancyLocations() {
+        List<java.lang.String> vacancyLocations = new ArrayList();
         List<WebElement> locationsList = $$(Locators.VACANCY_LOCATION);
         for (WebElement title : locationsList) {
             vacancyLocations.add(title.getText());
@@ -65,8 +63,8 @@ public class SearchResultPage extends BasePage {
     public interface Locators {
         By PAGE_LOCATOR = By.cssSelector(".vvt");
         By VACANCY_TITLES = By.className("t");
-        String FIND_JOB_BY_GENERAL = "";
-        String LOCATION_GENERAL = "//a[contains(.,'%s')]";
+        java.lang.String FIND_JOB_BY_GENERAL = "";
+        java.lang.String LOCATION_GENERAL = "//a[contains(.,'%s')]";
         By DROPDOWN_OPEN = By.xpath(".//div[@class='dropdown open']");
         By LOCATION_KYIV = By.xpath(".//*[@id='beforeContentZone_HorizontalContainer1_CityPickerWork_topLevelCities']/li[6]/a");
         By OPEN_DROPDOWN = By.cssSelector(".searchform .city-picker.uneditable-input");

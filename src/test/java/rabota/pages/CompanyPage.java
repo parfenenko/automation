@@ -32,8 +32,11 @@ public class CompanyPage extends BasePage{
         return vacancyCount;
     }
 
-    public void selectLocation(String location) {}
-
+    public void selectLocation(String linkText) {
+        $(Locators.LOCATION_DROPDOWN).click();
+        By LINK = (By.xpath(String.format(Locators.LOCATION_GENERAL, linkText)));
+        clickOn(LINK);
+    }
 
     public List<String> getVacancyLocations() {
         List<String> vacancyLocations = new ArrayList<String>();
@@ -64,7 +67,9 @@ public class CompanyPage extends BasePage{
         By PAGE_LOCATOR = By.cssSelector("#centerZone_lnkBack");
         By PAGE_TITLE = By.xpath("//h2");
         By CATEGORY_DROPDOWN = By.id("centerZone_centerZone_CompanyInfoCenterAreaSwitcher1_ctl00_ctl00_CompanyListFilter1_ddlRubric");
+        By LOCATION_DROPDOWN = By.xpath(".//*[@id='centerZone_centerZone_CompanyInfoCenterAreaSwitcher1_ctl00_ctl00_CompanyListFilter1_ddlCity']");
         String CATEGORY_GENERAL = "//option[contains(.,'%s')]";
+        String LOCATION_GENERAL = "//option[contains(.,'%s')]";
         By VACANCY = By.cssSelector(".comvac_list .compvac_holder");
         By VACANCY_LOCATION = By.xpath("//div[@class='compvac_info']");
     }
