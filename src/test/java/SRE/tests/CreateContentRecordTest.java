@@ -12,13 +12,13 @@ import org.testng.annotations.Test;
 public class CreateContentRecordTest extends BaseTest{
 
     //        Test data
-    String login = "payu+1@ciklum.com";
-    String password = "Qwerty123456";
+    String login = "";
+    String password = "";
 
     @BeforeTest
     public void openLoginPage() {
         openBrowser();
-        openPage("http://dev.sr.pp.ciklum.com/");
+        openPage("");
     }
 
     @AfterTest
