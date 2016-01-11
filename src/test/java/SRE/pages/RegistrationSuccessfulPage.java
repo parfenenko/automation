@@ -8,9 +8,7 @@ import org.openqa.selenium.By;
  */
 public class RegistrationSuccessfulPage extends BasePage{
 
-    public RegistrationSuccessfulPage(){
-        waitPageLoaded(Locators.PAGE_LOCATOR, 5, "RegistrationSuccessfulPage");
-    }
+    public RegistrationSuccessfulPage(){waitPageLoaded(Locators.PAGE_LOCATOR, 5, "RegistrationSuccessfulPage");}
 
     public interface Locators{
         By PAGE_LOCATOR = By.xpath("//div[@class='register-notification']");
