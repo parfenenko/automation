@@ -1,5 +1,7 @@
 package SRE.tests;
 
+import SRE.pages.CreateContentRecordPage;
+import SRE.pages.DistributionPage;
 import SRE.pages.LoginPage;
 import framework.BaseTest;
 import org.testng.annotations.AfterTest;
@@ -11,14 +13,18 @@ import org.testng.annotations.Test;
  */
 public class CreateContentRecordTest extends BaseTest{
 
+    private DistributionPage distributionPage;
+    private CreateContentRecordPage createContentRecordPage;
+
     //        Test data
-    String login = "";
-    String password = "";
+    String login = "payu+1@ciklum.com";
+    String password = "Qwerty123456";
+    String contentRecordType = "Short Film";
 
     @BeforeTest
     public void openLoginPage() {
         openBrowser();
-        openPage("");
+        openPage("http://dev.sr.pp.ciklum.com/");
     }
 
     @AfterTest
@@ -29,7 +35,9 @@ public class CreateContentRecordTest extends BaseTest{
     @Test
     public void createContentRecord(){
         LoginPage loginPage = new LoginPage();
-        loginPage.login(login, password);
+        distributionPage = loginPage.login(login, password);
+        createContentRecordPage = distributionPage.clickCreateContentRecord();
+        createContentRecordPage.selectTypeByName(contentRecordType);
     }
 
 }

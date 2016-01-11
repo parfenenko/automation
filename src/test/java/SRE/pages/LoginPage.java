@@ -8,13 +8,15 @@ import org.openqa.selenium.By;
  */
 public class LoginPage extends BasePage{
 
-    public void login(String login, String password) {
+    public DistributionPage login(String login, String password) {
         $(Locators.LOGIN_FIELD).sendKeys(login);
         $(Locators.PASSWORD_FIELD).sendKeys(password);
         $(Locators.LOGIN_BUTTON).click();
+        return new DistributionPage();
     }
 
     public interface Locators{
+        By PAGE_LOCATOR = By.xpath("");
         By LOGIN_FIELD = By.xpath(".//*[@id='_username']");
         By PASSWORD_FIELD = By.xpath(".//*[@id='_password']");
         By LOGIN_BUTTON = By.cssSelector(".col-md-2.col-md-offset-5.btn.btn-auth.save-btn.save-info-btn");
