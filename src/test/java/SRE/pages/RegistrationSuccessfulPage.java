@@ -6,11 +6,13 @@ import org.openqa.selenium.By;
 /**
  * Created by payu on 12/3/2015.
  */
-public class RegistrationSuccessfulPage extends BasePage{
+public class RegistrationSuccessfulPage extends BasePage {
 
-    public RegistrationSuccessfulPage(){waitPageLoaded(Locators.PAGE_LOCATOR, 5, "RegistrationSuccessfulPage");}
+    public RegistrationSuccessfulPage() {
+        waitPageLoaded(Locators.PAGE_LOCATOR, 5, "RegistrationSuccessfulPage");
+    }
 
-    public interface Locators{
+    public interface Locators {
         By PAGE_LOCATOR = By.xpath("//div[@class='register-notification']");
     }
 }

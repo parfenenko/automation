@@ -11,10 +11,10 @@ import rabota.pages.SearchResultPage;
 /**
  * Created by payu on 12/3/2015.
  */
-public class RegisterCompanyIterTest extends BaseTest{
+public class RegisterCompanyIterTest extends BaseTest {
 
-private SearchResultPage searchResultPage;
-private RegistrationSuccessfulPage registrationSuccessfulPage;
+    private SearchResultPage searchResultPage;
+    private RegistrationSuccessfulPage registrationSuccessfulPage;
 
     //        Test data
     String email;
@@ -39,7 +39,7 @@ private RegistrationSuccessfulPage registrationSuccessfulPage;
     public void registerCompany() {
         RegistrationPage registrationPage = new RegistrationPage();
 
-        for (int i=15; i < 100; i++)
+        for (int i = 15; i < 100; i++)
             email = String.format("payu+%d@ciklum.com", i);
         registrationSuccessfulPage = registrationPage.createCompany(email, first_name, last_name, password, company_name, country);
     }

@@ -6,25 +6,31 @@ import org.openqa.selenium.By;
 /**
  * Created by payu on 12/2/2015.
  */
-public class RegistrationPage extends BasePage{
+public class RegistrationPage extends BasePage {
+
+    public RegistrationPage() {
+        waitPageLoaded(Locators.PAGE_LOCATOR, 5, "RegistrationPage");
+    }
+
     public RegistrationSuccessfulPage createCompany(String email,
-                              String first_name,
-                              String last_name,
-                              String password,
-                              String company_name,
-                              String country) {
-        $(Locators.EMAIL).sendKeys(email);
-        $(Locators.FIRST_NAME).sendKeys(first_name);
-        $(Locators.LAST_NAME).sendKeys(last_name);
-        $(Locators.PASSWORD).sendKeys(password);
-        $(Locators.CONFIRM_PASSWORD).sendKeys(password);
-        $(Locators.COMPANY_NAME).sendKeys(company_name);
-        $(Locators.COUNTRY).sendKeys(country);
+                                                    String first_name,
+                                                    String last_name,
+                                                    String password,
+                                                    String company_name,
+                                                    String country) {
+        inputText(Locators.EMAIL, email);
+        inputText(Locators.FIRST_NAME, first_name);
+        inputText(Locators.LAST_NAME, last_name);
+        inputText(Locators.PASSWORD, password);
+        inputText(Locators.CONFIRM_PASSWORD, password);
+        inputText(Locators.COMPANY_NAME, company_name);
+        inputText(Locators.COUNTRY, country);
         $(Locators.REGISTER_BUTTON).click();
         return new RegistrationSuccessfulPage();
-}
+    }
 
-    public interface Locators{
+    public interface Locators {
+        By PAGE_LOCATOR = By.cssSelector(".login-header");
         By EMAIL = By.cssSelector("#user_email");
         By FIRST_NAME = By.cssSelector("#user_firstName");
         By LAST_NAME = By.cssSelector("#user_lastName");

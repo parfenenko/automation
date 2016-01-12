@@ -4,7 +4,7 @@ import framework.BasePage;
 import org.openqa.selenium.By;
 
 /**
- * Created by payu on 1/11/2016.
+ * Created by payu on 1/12/2016.
  */
 public class CreateContentRecordConfirmationPage extends BasePage {
 
@@ -13,6 +13,6 @@ public class CreateContentRecordConfirmationPage extends BasePage {
     }
 
     public interface Locators{
-        By PAGE_LOCATOR = By.cssSelector("#user-flash-widget-label");
+        By PAGE_LOCATOR = By.xpath(".//*[@id='alert-3']");
     }
 }

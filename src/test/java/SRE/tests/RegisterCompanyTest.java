@@ -11,7 +11,7 @@ import rabota.pages.SearchResultPage;
 /**
  * Created by payu on 12/2/2015.
  */
-public class RegisterCompanyTest extends BaseTest{
+public class RegisterCompanyTest extends BaseTest {
 
     private SearchResultPage searchResultPage;
     private RegistrationSuccessfulPage registrationSuccessfulPage;

@@ -6,74 +6,79 @@ import org.openqa.selenium.By;
 /**
  * Created by j.parfenenko on 1/6/16.
  */
-public class CreateContentRecordPage extends BasePage{
+public class CreateContentRecordPage extends BasePage {
 
-    public CreateContentRecordPage() {waitPageLoaded(Locators.PAGE_LOCATOR, 5, "CreateContentRecordPage");}
+    public CreateContentRecordPage() {
+        waitPageLoaded(Locators.PAGE_LOCATOR, 5, "CreateContentRecordPage");
+    }
 
-    public void selectTypeByName(String linkText) {
+    public void selectTypeByName(String contentRecordType) {
         $(Locators.TYPE_DROPDOWN).click();
-        By LINK = (By.xpath(String.format(Locators.TYPE_GENERAL, linkText)));
+        By LINK = (By.xpath(String.format(Locators.GENERAL_STRING, contentRecordType)));
         clickOn(LINK);
     }
 
     public void fillTitle(String title) {
-        $(Locators.TITLE).sendKeys(title);
+        inputText(Locators.TITLE, title);
     }
 
-    public void fillYear(String  year) {
-        $(Locators.YEAR).sendKeys(year);
+    public void fillYear(String year) {
+        inputText(Locators.YEAR, year);
     }
 
     public void selectCountry(String country) {
         $(Locators.COUNTRY_DROPDOWN).click();
-        By LINK = (By.xpath(String.format(Locators.TYPE_GENERAL, country)));
+        By LINK = (By.xpath(String.format(Locators.GENERAL_STRING, country)));
         clickOn(LINK);
     }
 
     public void selectLanguage(String language) {
         $(Locators.LANGUAGE_DROPDOWN).click();
-        By LINK = (By.xpath(String.format(Locators.TYPE_GENERAL, language)));
+        By LINK = (By.xpath(String.format(Locators.GENERAL_STRING, language)));
         clickOn(LINK);
     }
 
     public void fillProducer(String producer) {
-        $(Locators.PRODUCER).sendKeys(producer);
+        inputText(Locators.PRODUCER, producer);
     }
 
     public void fillDirector(String director) {
-        $(Locators.DIRECTOR).sendKeys(director);
+
+       inputText(Locators.DIRECTOR, director);
     }
 
     public void selectFormat(String format) {
         $(Locators.FORMAT_DROPDOWN).click();
-        By LINK = (By.xpath(String.format(Locators.TYPE_GENERAL, format)));
-        clickOn(LINK);}
-
-    public void selectGenres(String[] genres) {
-        for (int i = 0; i < genres.length; i++){
-        $(Locators.GENRES_DROPDOWN).click();
-        By LINK = (By.xpath(String.format(Locators.TYPE_GENERAL, genres[i])));
-        clickOn(LINK);}
+        By LINK = (By.xpath(String.format(Locators.GENERAL_STRING, format)));
+        clickOn(LINK);
     }
 
-    public void fillTags(String[] tags){
-        for (int i=0; i< tags.length; i++){
+    public void selectGenres(String[] genres) {
+        for (int i = 0; i < genres.length; i++) {
+            $(Locators.GENRES_DROPDOWN).click();
+            By LINK = (By.xpath(String.format(Locators.GENERAL_STRING, genres[i])));
+            clickOn(LINK);
+        }
+    }
+
+    public void fillTags(String[] tags) {
+        for (int i = 0; i < tags.length; i++) {
             waitUntilElementLoaded(Locators.TAGS, 5, "TAGS");
             $(Locators.TAGS).sendKeys(tags[i]);
         }
     }
 
     public void fillSynopsis(String synopsis) {
-        $(Locators.SYNOPSIS).sendKeys(synopsis);
+        inputText(Locators.SYNOPSIS, synopsis);
     }
 
     public void fillCast(String cast) {
-        $(Locators.CAST).sendKeys(cast);
+        inputText(Locators.CAST, cast);
     }
 
-    public CreateContentRecordConfirmationPage clickSaveAndExit() {
+    public CreateContentRecordConfirmationDialogPage clickSaveAndExit() {
         $(Locators.SAVE_AND_EXIT_BUTTON).click();
-        return new CreateContentRecordConfirmationPage();
+        return new CreateContentRecordConfirmationDialogPage();
     }
 
     public CreateRightsPage clickNextRights() {
@@ -81,17 +86,16 @@ public class CreateContentRecordPage extends BasePage{
         return new CreateRightsPage();
     }
 
-    public interface Locators{
+    public interface Locators {
+        String GENERAL_STRING = "//option[contains(.,'%s')]";
         By PAGE_LOCATOR = By.xpath("//h1[contains(.,'Create Content Record')]");
         By TYPE_DROPDOWN = By.xpath(".//*[@id='select2-chosen-1']");
-        String TYPE_GENERAL = "//option[contains(.,'%s')]";
         By TITLE = By.xpath(".//*[@id='content_name']");
         By YEAR = By.xpath(".//*[@id='content_year']");
         By COUNTRY_DROPDOWN = By.xpath(".//*[@id='select2-chosen-2']");
-        String COUNTRY_GENERAL = "//span[contains(.,'%s')]";
         By LANGUAGE_DROPDOWN = By.xpath(".//*[@id='select2-chosen-3']");
         By PRODUCER = By.xpath(".//*[@id='content_producer']");
-        By DIRECTOR =  By.xpath(".//*[@id='content_director']");
+        By DIRECTOR = By.xpath(".//*[@id='content_director']");
         By FORMAT_DROPDOWN = By.xpath(".//*[@id='select2-chosen-4']");
         By GENRES_DROPDOWN = By.xpath(".//*[@id='s2id_content_genres']/ul");
         By TAGS = By.cssSelector(".ui-widget-content.ui-autocomplete-input");

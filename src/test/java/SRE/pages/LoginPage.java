@@ -1,24 +1,36 @@
 package SRE.pages;
 
 import framework.BasePage;
+import framework.DriverManager;
 import org.openqa.selenium.By;
 
 /**
  * Created by j.parfenenko on 1/5/16.
  */
-public class LoginPage extends BasePage{
+public class LoginPage extends BasePage {
+
+    String url = "";
+
+    public LoginPage() {
+        waitPageLoaded(Locators.PAGE_LOCATOR, 5, "LoginPage");
+    }
 
     public DistributionPage login(String login, String password) {
-        $(Locators.LOGIN_FIELD).sendKeys(login);
-        $(Locators.PASSWORD_FIELD).sendKeys(password);
+        inputText(Locators.LOGIN_FIELD, login);
+        inputText(Locators.PASSWORD_FIELD, password);
         $(Locators.LOGIN_BUTTON).click();
         return new DistributionPage();
     }
 
-    public interface Locators{
-        By PAGE_LOCATOR = By.xpath("");
+    public CreateContentRecordPage openCreateContentRecordPage() {
+        DriverManager.getDriver().get(url);
+        return new CreateContentRecordPage();
+    }
+
+    public interface Locators {
+        By PAGE_LOCATOR = By.xpath("//*[@class='login-header']");
         By LOGIN_FIELD = By.xpath(".//*[@id='_username']");
         By PASSWORD_FIELD = By.xpath(".//*[@id='_password']");
-        By LOGIN_BUTTON = By.cssSelector(".col-md-2.col-md-offset-5.btn.btn-auth.save-btn.save-info-btn");
+        By LOGIN_BUTTON = By.xpath("//button[@name='login']");
     }
 }

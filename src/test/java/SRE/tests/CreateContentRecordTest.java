@@ -6,30 +6,29 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import java.util.List;
-
 /**
  * Created by j.parfenenko on 1/5/16.
  */
-public class CreateContentRecordTest extends BaseTest{
+public class CreateContentRecordTest extends BaseTest {
 
     private DistributionPage distributionPage;
     private CreateContentRecordPage createContentRecordPage;
-    private CreateContentRecordConfirmationPage createContentRecordConfirmationPage;
+    private CreateContentRecordConfirmationDialogPage createContentRecordConfirmationDialogPage;
     private CreateRightsPage createRightsPage;
+    private CreateContentRecordConfirmationPage createContentRecordConfirmationPage;
 
     //        Test data
-    String login = "payu+1@ciklum.com";
-    String password = "Qwerty123456";
+    String login = "";
+    String password = "";
     String contentRecordType = "Short Film";
     String title = "Auto Title";
-    String year = "2020";
+    String year = "1111";
     String country = "DZ";
     String language = "MAN";
     String producer = "Steven Spielberg";
     String director = "Quentin Tarantino";
-    String format = "< 5";
-    String[] genres = new String[]{"Coming-Of-Age" , "Pornography" , "Sitcom"};
+    String format = "30";
+    String[] genres = new String[]{"Coming-Of-Age", "Pornography", "Sitcom"};
     String[] tags = new String[]{"automation,", "selenium,", "test,"};
     String synopsis = "" +
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. " +
@@ -55,10 +54,19 @@ public class CreateContentRecordTest extends BaseTest{
             "Gwendoline Christie - Captain Phasma\n" +
             "Joonas Suotamo - Chewbacca Double ";
 
+    String typeOfRight = "Acquisition for distribution";
+    String companyName = "Test Company";
+    String territory = "BN";
+    String broadcastingType = "DTO";
+    String startLicenseDate = "26.02.2016";
+    String endLicenseDate = "31.12.2016";
+    String deliveryDate = "26.02.2016";
+    String orderNumber = "test order";
+
     @BeforeTest
     public void openLoginPage() {
         openBrowser();
-        openPage("http://dev.sr.pp.ciklum.com/");
+        openPage("");
     }
 
     @AfterTest
@@ -66,8 +74,8 @@ public class CreateContentRecordTest extends BaseTest{
         closeBrowser();
     }
 
-    @Test(priority = 1)
-    public void createContentRecord(){
+    @Test(priority = 1, enabled = true)
+    public void createContentRecord() {
         LoginPage loginPage = new LoginPage();
         distributionPage = loginPage.login(login, password);
         createContentRecordPage = distributionPage.clickCreateContentRecord();
@@ -83,12 +91,15 @@ public class CreateContentRecordTest extends BaseTest{
         createContentRecordPage.fillTags(tags);
         createContentRecordPage.fillSynopsis(synopsis);
         createContentRecordPage.fillCast(cast);
-        createContentRecordConfirmationPage = createContentRecordPage.clickSaveAndExit();
+        createContentRecordConfirmationDialogPage = createContentRecordPage.clickSaveAndExit();
     }
 
-    @Test(priority = 2)
-    public void createContentRecordWithRights(){
-        openPage("http://dev.sr.pp.ciklum.com/content/create");
+    @Test(priority = 2, enabled = true)
+    public void createContentRecordWithRights() {
+//        LoginPage loginPage = new LoginPage();
+//        loginPage.login(login, password);
+//        createContentRecordPage = loginPage.openCreateContentRecordPage();
+        openPage("");
         createContentRecordPage.selectTypeByName(contentRecordType);
         createContentRecordPage.fillTitle(title);
         createContentRecordPage.fillYear(year);
@@ -98,5 +109,15 @@ public class CreateContentRecordTest extends BaseTest{
         createContentRecordPage.fillDirector(director);
         createContentRecordPage.selectFormat(format);
         createRightsPage = createContentRecordPage.clickNextRights();
+        createRightsPage.selectTypeOfRight(typeOfRight);
+        createRightsPage.fillCompany(companyName);
+        createRightsPage.selectTerritory(territory);
+        createRightsPage.selectLanguage(language);
+        createRightsPage.selectBroadcastingType(broadcastingType);
+        createRightsPage.setStartLicenseDate(startLicenseDate);
+        createRightsPage.setEndLicenseDate(endLicenseDate);
+        createRightsPage.setDeliveryDate(deliveryDate);
+        createRightsPage.fillOrderNumbers(orderNumber);
+        createContentRecordConfirmationPage = createRightsPage.clickSaveButton();
     }
 }

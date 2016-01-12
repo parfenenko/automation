@@ -8,9 +8,11 @@ import static framework.DriverManager.getDriver;
 /**
  * Created by j.parfenenko on 1/6/16.
  */
-public class DistributionPage extends BasePage{
+public class DistributionPage extends BasePage {
 
-    public DistributionPage(){waitPageLoaded(Locators.PAGE_LOCATOR, 5, "DistributionPage");}
+    public DistributionPage() {
+        waitPageLoaded(Locators.PAGE_LOCATOR, 5, "DistributionPage");
+    }
 
     public CreateContentRecordPage clickCreateContentRecord() {
         waitUntilElementLoaded(Locators.CREATE_NEW_CONTENT_RECORD_BUTTON, 5, "CREATE_NEW_CONTENT_RECORD_BUTTON");
@@ -19,7 +21,7 @@ public class DistributionPage extends BasePage{
         return new CreateContentRecordPage();
     }
 
-    public interface Locators{
+    public interface Locators {
         By PAGE_LOCATOR = By.xpath("//h4[contains(@class,'top-counter')]");
         By CREATE_NEW_CONTENT_RECORD_BUTTON = By.xpath("//span[@class='icon icon-round icon-create_new_cr']");
     }
