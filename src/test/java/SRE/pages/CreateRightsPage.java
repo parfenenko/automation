@@ -13,7 +13,7 @@ public class CreateRightsPage extends BasePage {
     }
 
     public void selectTypeOfRight(String typeOfRight) {
-        $(Locators.TYPE_OF_RIGHTS).click();
+        clickOn(Locators.TYPE_OF_RIGHTS);
         By LINK = (By.xpath(String.format(Locators.GENERAL_STRING, typeOfRight)));
         clickOn(LINK);
     }
@@ -23,19 +23,19 @@ public class CreateRightsPage extends BasePage {
     }
 
     public void selectTerritory(String territory) {
-        $(Locators.TERRITORY).click();
+        clickOn(Locators.TERRITORY);
         By LINK = (By.xpath(String.format(Locators.GENERAL_STRING, territory)));
         clickOn(LINK);
     }
 
     public void selectLanguage(String language) {
-        $(Locators.LANGUAGE).click();
+        clickOn(Locators.LANGUAGE);
         By LINK = (By.xpath(String.format(Locators.GENERAL_STRING, language)));
         clickOn(LINK);
     }
 
     public void selectBroadcastingType(String broadcastingType) {
-        $(Locators.BROADCASTING_TYPE).click();
+        clickOn(Locators.BROADCASTING_TYPE);
         By LINK = (By.xpath(String.format(Locators.GENERAL_STRING, broadcastingType)));
         clickOn(LINK);
     }
@@ -58,7 +58,8 @@ public class CreateRightsPage extends BasePage {
 
     public CreateContentRecordConfirmationPage clickSaveButton() {
         waitUntilElementLoaded(Locators.SAVE_BUTTON, 5, "SAVE_BUTTON");
-        $(Locators.SAVE_BUTTON).click();
+        clickOn(Locators.SAVE_BUTTON);
+        sleep(500);
         return new CreateContentRecordConfirmationPage();
     }
 
@@ -80,6 +81,6 @@ public class CreateRightsPage extends BasePage {
         By ORDER_NUMBER = By.xpath(".//*[@id='content_rights_0_contractId']");
         By ADD_LINE_BUTTON = By.xpath("//span[contains(.,'Add line')]");
         By PREVIOUS_GENERAL_INFO_BUTTON = By.xpath(".//*[@id='back-to-general-info']");
-        By SAVE_BUTTON = By.xpath(".//*[@id='content_create']");
+        By SAVE_BUTTON = By.name("content[create]");
     }
 }

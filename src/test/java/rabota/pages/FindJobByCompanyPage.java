@@ -6,15 +6,15 @@ import org.openqa.selenium.By;
 /**
  * Created by payu on 11/5/2015.
  */
-public class FindJobByCompanyPage extends BasePage{
+public class FindJobByCompanyPage extends BasePage {
 
-    public FindJobByCompanyPage(){
+    public FindJobByCompanyPage() {
         waitPageLoaded(Locators.PAGE_LOCATOR, 5, "FindJobByCompanyPage");
     }
 
     public CompanyPage searchVacancyByCompanyName(String company) {
-        $(Locators.SEARCH_BY_COMPANY_INPUT).sendKeys(company);
-        $(Locators.FIND_BUTTON).click();
+        inputText(Locators.SEARCH_BY_COMPANY_INPUT, company);
+        clickOn(Locators.FIND_BUTTON);
         return new CompanyPage();
     }
 

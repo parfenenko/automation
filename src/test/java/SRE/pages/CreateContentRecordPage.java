@@ -13,7 +13,7 @@ public class CreateContentRecordPage extends BasePage {
     }
 
     public void selectTypeByName(String contentRecordType) {
-        $(Locators.TYPE_DROPDOWN).click();
+        clickOn(Locators.TYPE_DROPDOWN);
         By LINK = (By.xpath(String.format(Locators.GENERAL_STRING, contentRecordType)));
         clickOn(LINK);
     }
@@ -27,13 +27,13 @@ public class CreateContentRecordPage extends BasePage {
     }
 
     public void selectCountry(String country) {
-        $(Locators.COUNTRY_DROPDOWN).click();
+        clickOn(Locators.COUNTRY_DROPDOWN);
         By LINK = (By.xpath(String.format(Locators.GENERAL_STRING, country)));
         clickOn(LINK);
     }
 
     public void selectLanguage(String language) {
-        $(Locators.LANGUAGE_DROPDOWN).click();
+        clickOn(Locators.LANGUAGE_DROPDOWN);
         By LINK = (By.xpath(String.format(Locators.GENERAL_STRING, language)));
         clickOn(LINK);
     }
@@ -48,14 +48,14 @@ public class CreateContentRecordPage extends BasePage {
     }
 
     public void selectFormat(String format) {
-        $(Locators.FORMAT_DROPDOWN).click();
+        clickOn(Locators.FORMAT_DROPDOWN);
         By LINK = (By.xpath(String.format(Locators.GENERAL_STRING, format)));
         clickOn(LINK);
     }
 
     public void selectGenres(String[] genres) {
         for (int i = 0; i < genres.length; i++) {
-            $(Locators.GENRES_DROPDOWN).click();
+            clickOn(Locators.GENRES_DROPDOWN);
             By LINK = (By.xpath(String.format(Locators.GENERAL_STRING, genres[i])));
             clickOn(LINK);
         }
@@ -77,12 +77,12 @@ public class CreateContentRecordPage extends BasePage {
     }
 
     public CreateContentRecordConfirmationDialogPage clickSaveAndExit() {
-        $(Locators.SAVE_AND_EXIT_BUTTON).click();
+        clickOn(Locators.SAVE_AND_EXIT_BUTTON);
         return new CreateContentRecordConfirmationDialogPage();
     }
 
     public CreateRightsPage clickNextRights() {
-        $(Locators.NEXT_RIGHTS_BUTTON).click();
+        clickOn(Locators.NEXT_RIGHTS_BUTTON);
         return new CreateRightsPage();
     }
 

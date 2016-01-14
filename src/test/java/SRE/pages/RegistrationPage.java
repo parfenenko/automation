@@ -2,6 +2,7 @@ package SRE.pages;
 
 import framework.BasePage;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 /**
  * Created by payu on 12/2/2015.
@@ -24,12 +25,17 @@ public class RegistrationPage extends BasePage {
         inputText(Locators.PASSWORD, password);
         inputText(Locators.CONFIRM_PASSWORD, password);
         inputText(Locators.COMPANY_NAME, company_name);
-        inputText(Locators.COUNTRY, country);
-        $(Locators.REGISTER_BUTTON).click();
+        clickOn(Locators.COUNTRY);
+        By LINK = (By.xpath(String.format(Locators.GENERAL_STRING, country)));
+        sleep(500);
+        clickOn(LINK);
+        clickOn(Locators.REGISTER_BUTTON);
         return new RegistrationSuccessfulPage();
     }
 
     public interface Locators {
+        By GERMANY = By.xpath("//option[contains(.,'Germany')]");
+        String GENERAL_STRING = "//option[contains(.,'%s')]";
         By PAGE_LOCATOR = By.cssSelector(".login-header");
         By EMAIL = By.cssSelector("#user_email");
         By FIRST_NAME = By.cssSelector("#user_firstName");

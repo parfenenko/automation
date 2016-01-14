@@ -19,7 +19,7 @@ import static org.testng.AssertJUnit.assertTrue;
 /**
  * Created by payu on 12/18/2015.
  */
-public class RegistrationTest extends BaseTest{
+public class RegistrationTest extends BaseTest {
 
     //        Test data
     String first_name = "Юлія";

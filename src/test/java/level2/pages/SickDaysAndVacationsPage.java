@@ -14,7 +14,7 @@ public class SickDaysAndVacationsPage extends BasePage {
 
     public void selectUserByName(String linkText) {
         By LINK = (By.xpath(String.format(Locators.GENERAL_LINK_USER_NAVIGATE_XPATH, linkText)));
-        $(LINK).click();
+        clickOn(LINK);
     }
 
     public int getCountOfTotalVacationsDays() {
@@ -24,7 +24,7 @@ public class SickDaysAndVacationsPage extends BasePage {
 
     public void selectDate(String date) {
         inputText(Locators.END_DATE, date);
-        $(Locators.SHOW_BUTTON).click();
+        clickOn(Locators.SHOW_BUTTON);
     }
 
     public interface Locators {

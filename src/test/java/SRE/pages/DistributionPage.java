@@ -16,7 +16,7 @@ public class DistributionPage extends BasePage {
 
     public CreateContentRecordPage clickCreateContentRecord() {
         waitUntilElementLoaded(Locators.CREATE_NEW_CONTENT_RECORD_BUTTON, 5, "CREATE_NEW_CONTENT_RECORD_BUTTON");
-        $(Locators.CREATE_NEW_CONTENT_RECORD_BUTTON).click();
+        clickOn(Locators.CREATE_NEW_CONTENT_RECORD_BUTTON);
 //        getDriver().findElement(By.xpath("//span[@class='icon icon-round icon-create_new_cr']")).click();
         return new CreateContentRecordPage();
     }

@@ -14,14 +14,14 @@ public class RegistrationPage extends BasePage {
 //    }
 
     public void fillTheFields(String first_name, String last_name, String father_name, String phone_number, String email) {
-        $(Locators.LAST_NAME).sendKeys(last_name);
-        $(Locators.FIRST_NAME).sendKeys(first_name);
-        $(Locators.FATHER_NAME).sendKeys(father_name);
-        $(Locators.PHONE_NUMBER).sendKeys(phone_number);
-        $(Locators.EMAIL).sendKeys(email);
+        inputText(Locators.LAST_NAME, last_name);
+        inputText(Locators.FIRST_NAME, first_name);
+        inputText(Locators.FATHER_NAME, father_name);
+        inputText(Locators.PHONE_NUMBER, phone_number);
+        inputText(Locators.EMAIL, email);
     }
 
-    public interface Locators{
+    public interface Locators {
         By PAGE_LOCATOR = By.id("");
         By LAST_NAME = By.id("formid_2443");
         By FIRST_NAME = By.id("formid_2444");

@@ -5,6 +5,7 @@ import framework.DriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,13 +28,13 @@ public class SearchResultPage extends BasePage {
     }
 
     public void selectLocation() {
-        $(Locators.OPEN_DROPDOWN).click();
+        clickOn(Locators.OPEN_DROPDOWN);
         waitUntilElementLoaded(Locators.DROPDOWN_OPEN, 5, "DROPDOWN_OPEN");
 
 //       By LINK = (By.xpath(String.format(Locators.LOCATION_GENERAL, linkText)));
 //       clickOn(LINK);
 
-        $(Locators.LOCATION_KYIV).click();
+        clickOn(Locators.LOCATION_KYIV);
 
 //        if ($(Locators.DROPDOWN_OPEN).isDisplayed()) {
 //            $(Locators.LOCATION_KYIV).click();
@@ -41,7 +42,7 @@ public class SearchResultPage extends BasePage {
 //            $(Locators.OPEN_DROPDOWN).click();
 //        }
 
-        $(RabotaUaHomePage.Locators.SEARCH_BUTTON).click();
+        clickOn(RabotaUaHomePage.Locators.SEARCH_BUTTON);
     }
 
     public List<java.lang.String> getVacancyLocations() {
@@ -51,12 +52,13 @@ public class SearchResultPage extends BasePage {
             vacancyLocations.add(title.getText());
         }
         return vacancyLocations;
-   }
+    }
+
     public FindJobByCompanyPage navigateToFindJobByCategory() {
         driver = DriverManager.getDriver();
         Actions action = new Actions(driver);
         action.moveToElement($(Locators.FIND_JOB_MENU)).build().perform();
-        $(Locators.FIND_JOB_BY_COMPANY_LINK).click();
+        clickOn(Locators.FIND_JOB_BY_COMPANY_LINK);
         return new FindJobByCompanyPage();
     }
 

@@ -1,6 +1,8 @@
 package framework;
 
+import com.sun.glass.ui.Size;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -41,7 +43,7 @@ public class BasePage {
         }
     }
 
-    public static void waitUntilElementLoaded(By locator, int timeout, String assertionMessage){
+    public static void waitUntilElementLoaded(By locator, int timeout, String assertionMessage) {
         boolean present;
         try {
             present = $(locator).isDisplayed();
@@ -72,10 +74,15 @@ public class BasePage {
 
     public static WebDriver driver;
 
-    public static void mouseHover(String main) {
-        driver.get("http://rabota.ua");
+    public static void mouseHover(String main, String url) {
+        driver.get(url);
         WebElement element = driver.findElement(By.xpath(main));
         Actions action = new Actions(driver);
         action.moveToElement(element).build().perform();
+    }
+
+    public static void maximiseResolution(){
+        driver.manage().window().maximize();
+
     }
 }

@@ -13,8 +13,8 @@ public class RabotaUaHomePage extends BasePage{
     }
 
     public SearchResultPage findVacancyByKeyword(String locator) {
-        $(Locators.SEARCH_ENTRY).sendKeys(locator);
-        $(Locators.SEARCH_BUTTON).click();
+        inputText(Locators.SEARCH_ENTRY, locator);
+        clickOn(Locators.SEARCH_BUTTON);
         return new SearchResultPage();
     }
 

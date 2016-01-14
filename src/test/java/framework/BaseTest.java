@@ -1,5 +1,7 @@
 package framework;
+
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.nio.charset.Charset;
 
@@ -17,6 +19,8 @@ public class BaseTest {
         String browserName = System.getProperty("browser");
         WebDriver driver = DriverFactory.createInstance(browserName);
         DriverManager.setWebDriver(driver);
+//        driver.manage().window().maximize();
+//        driver.manage().window().setSize(new Dimension(300,500));
     }
 
     public void closeBrowser() {
@@ -39,8 +43,17 @@ public class BaseTest {
     String decodeUTF8(byte[] bytes) {
         return new String(bytes, UTF8_CHARSET);
     }
+
     byte[] encodeUTF8(String string) {
+
         return string.getBytes(UTF8_CHARSET);
+    }
+
+    public static void maximizeResolution() {
+        String browserName = System.getProperty("browser");
+        WebDriver driver = DriverFactory.createInstance(browserName);
+        DriverManager.setWebDriver(driver);
+        driver.manage().window().maximize();
     }
 
 }

@@ -3,14 +3,16 @@ package rabota.pages;
 import framework.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+
 import static java.nio.charset.StandardCharsets.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by payu on 11/5/2015.
  */
-public class CompanyPage extends BasePage{
+public class CompanyPage extends BasePage {
 
     public CompanyPage() {
         waitPageLoaded(Locators.PAGE_LOCATOR, 5, "CompanyPage");
@@ -22,7 +24,7 @@ public class CompanyPage extends BasePage{
     }
 
     public void selectCategoryByName(String linkText) {
-        $(Locators.CATEGORY_DROPDOWN).click();
+        clickOn(Locators.CATEGORY_DROPDOWN);
         By LINK = (By.xpath(String.format(Locators.CATEGORY_GENERAL, linkText)));
         clickOn(LINK);
     }
@@ -33,7 +35,7 @@ public class CompanyPage extends BasePage{
     }
 
     public void selectLocation(String linkText) {
-        $(Locators.LOCATION_DROPDOWN).click();
+        clickOn(Locators.LOCATION_DROPDOWN);
         By LINK = (By.xpath(String.format(Locators.LOCATION_GENERAL, linkText)));
         clickOn(LINK);
     }
@@ -63,7 +65,7 @@ public class CompanyPage extends BasePage{
         return vacancyLocations;
     }*/
 
-    public interface Locators{
+    public interface Locators {
         By PAGE_LOCATOR = By.cssSelector("#centerZone_lnkBack");
         By PAGE_TITLE = By.xpath("//h2");
         By CATEGORY_DROPDOWN = By.id("centerZone_centerZone_CompanyInfoCenterAreaSwitcher1_ctl00_ctl00_CompanyListFilter1_ddlRubric");

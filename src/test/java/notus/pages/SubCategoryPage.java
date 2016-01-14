@@ -32,7 +32,7 @@ public class SubCategoryPage extends BasePage{
 
     public void setPriceTo(int priceTo) {
         inputText(Locators.PRICE_TO_FILTER, String.valueOf(priceTo));
-        $(Locators.SET_PRICE_FILTER_OK_BUTTON).click();
+        clickOn(Locators.SET_PRICE_FILTER_OK_BUTTON);
     }
 
     public List<Integer> getActualPrices() {
@@ -51,7 +51,7 @@ public class SubCategoryPage extends BasePage{
     }
 
     public PreviewCartPage clickBuyProduct() {
-        $(Locators.BUY_PRODUCT).click();
+        clickOn(Locators.BUY_PRODUCT);
         return new PreviewCartPage();
     }
 

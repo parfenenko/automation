@@ -18,8 +18,8 @@ public class CreateContentRecordTest extends BaseTest {
     private CreateContentRecordConfirmationPage createContentRecordConfirmationPage;
 
     //        Test data
-    String login = "";
-    String password = "";
+    String login = "payu+1@ciklum.com";
+    String password = "Qwerty123456";
     String contentRecordType = "Short Film";
     String title = "Auto Title";
     String year = "1111";
@@ -66,7 +66,7 @@ public class CreateContentRecordTest extends BaseTest {
     @BeforeTest
     public void openLoginPage() {
         openBrowser();
-        openPage("");
+        openPage("http://dev.sr.pp.ciklum.com/");
     }
 
     @AfterTest
@@ -74,7 +74,7 @@ public class CreateContentRecordTest extends BaseTest {
         closeBrowser();
     }
 
-    @Test(priority = 1, enabled = true)
+    @Test(priority = 1, enabled = false)
     public void createContentRecord() {
         LoginPage loginPage = new LoginPage();
         distributionPage = loginPage.login(login, password);
@@ -96,10 +96,10 @@ public class CreateContentRecordTest extends BaseTest {
 
     @Test(priority = 2, enabled = true)
     public void createContentRecordWithRights() {
-//        LoginPage loginPage = new LoginPage();
-//        loginPage.login(login, password);
-//        createContentRecordPage = loginPage.openCreateContentRecordPage();
-        openPage("");
+        LoginPage loginPage = new LoginPage();
+        loginPage.login(login, password);
+        createContentRecordPage = loginPage.openCreateContentRecordPage();
+//        openPage("http://dev.sr.pp.ciklum.com/content/create");
         createContentRecordPage.selectTypeByName(contentRecordType);
         createContentRecordPage.fillTitle(title);
         createContentRecordPage.fillYear(year);

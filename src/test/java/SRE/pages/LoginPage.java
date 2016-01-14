@@ -9,7 +9,7 @@ import org.openqa.selenium.By;
  */
 public class LoginPage extends BasePage {
 
-    String url = "";
+    String url = "http://dev.sr.pp.ciklum.com/content/create";
 
     public LoginPage() {
         waitPageLoaded(Locators.PAGE_LOCATOR, 5, "LoginPage");
@@ -18,7 +18,7 @@ public class LoginPage extends BasePage {
     public DistributionPage login(String login, String password) {
         inputText(Locators.LOGIN_FIELD, login);
         inputText(Locators.PASSWORD_FIELD, password);
-        $(Locators.LOGIN_BUTTON).click();
+        clickOn(Locators.LOGIN_BUTTON);
         return new DistributionPage();
     }
 

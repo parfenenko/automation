@@ -18,7 +18,7 @@ public class PreviewCartPage extends BasePage {
     }
 
     public CheckoutPage submitOrderButton() {
-        $(Locators.ORDER_BUTTON).click();
+        clickOn(Locators.ORDER_BUTTON);
         return new CheckoutPage();
     }
 
