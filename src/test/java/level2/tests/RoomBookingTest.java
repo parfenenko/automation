@@ -16,6 +16,8 @@ import org.testng.annotations.Test;
 public class RoomBookingTest extends BaseTest {
 
     //        Test data
+    String login = "payu+1@ciklum.com";
+    String password = "Qwerty123456";
 
     @BeforeTest
     public void openLoginPage() {

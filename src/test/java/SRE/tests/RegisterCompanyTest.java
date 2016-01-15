@@ -17,12 +17,12 @@ public class RegisterCompanyTest extends BaseTest {
     private RegistrationSuccessfulPage registrationSuccessfulPage;
 
     //        Test data
-    String registrationPageUrl = "http://dev.sr.pp.ciklum.com/registration/";
-    String email = "payu+59@ciklum.com";
-    String first_name = "59 test";
+    String registrationPageUrl = "";
+    String email = "payu+@ciklum.com";
+    String first_name = " test";
     String last_name = "test";
-    String password = "Qwerty123456";
-    String company_name = "59 test company";
+    String password = "";
+    String company_name = " test company";
     String country = "Germany";
 
     @BeforeTest

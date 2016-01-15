@@ -18,6 +18,8 @@ public class SickDaysTest extends BaseTest {
     //        Test data
     int currentCountOfTotalVacationsDays;
     int expectedCountOfTotalVacationsDays = 10;
+    String login;
+    String password;
 
     @BeforeTest
     public void openLoginPage() {
