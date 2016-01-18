@@ -1,8 +1,6 @@
 package SRE.tests;
 
-import SRE.pages.LoginPage;
-import SRE.pages.RegistrationPage;
-import SRE.pages.RegistrationSuccessfulPage;
+import SRE.pages.*;
 import framework.BaseTest;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -18,17 +16,23 @@ public class RegisterCompanyTest extends BaseTest {
 
     private SearchResultPage searchResultPage;
     private RegistrationSuccessfulPage registrationSuccessfulPage;
+    private InboxGmailPage inboxGmailPage;
+    private EmailPage emailPage;
 
     //        Test data
+    String jemail = "";
+    String jpassword = "";
     String homePageUrl = "";
     String registrationPageUrl = "";
-    String email = "payu+73@ciklum.com";
-    String first_name = "73 test";
+    String gmailLogin = "https://mail.google.com";
+    String email = "";
+    String first_name = "74 test";
     String last_name = "test";
     String password = "";
-    String company_name = "73 test company";
+    String company_name = "74 test company";
     String country = "Germany";
     String message = "Invalid username or password";
+    String sender = "";
 
     @BeforeTest
     public void openLoginPage() {
@@ -47,11 +51,22 @@ public class RegisterCompanyTest extends BaseTest {
         registrationSuccessfulPage = registrationPage.createCompany(email, first_name, last_name, password, company_name, country);
     }
 
-    @Test(priority = 2, enabled = true)
+    @Test(priority = 2, enabled = false)
     public void tryToLoginByInactiveUser(){
         openPage(homePageUrl);
         LoginPage loginPage = new LoginPage();
         loginPage.tryToLogin(email, password);
         assertEquals(loginPage.getErrorMessage(), message);
+    }
+
+    @Test(priority = 3, enabled = true)
+    public void activateUser(){
+        openPage(gmailLogin);
+        GmailHomePage gmailHomePage = new GmailHomePage();
+        inboxGmailPage = gmailHomePage.login(jemail, jpassword);
+        inboxGmailPage.searchEmailBySender(sender);
+        emailPage = inboxGmailPage.openEmail();
+        emailPage.proccedByLink();
+
     }
 }
