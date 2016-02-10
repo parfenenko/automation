@@ -20,19 +20,19 @@ public class RegisterCompanyTest extends BaseTest {
     private EmailPage emailPage;
 
     //        Test data
-    String jemail = "";
-    String jpassword = "";
-    String homePageUrl = "";
-    String registrationPageUrl = "";
+    String jemail = "payu@ciklum.com";
+    String jpassword = "broxMyLove600200";
+    String homePageUrl = "http://dev.sr.pp.ciklum.com/";
+    String registrationPageUrl = "http://dev.sr.pp.ciklum.com/registration/";
     String gmailLogin = "https://mail.google.com";
-    String email = "";
+    String email = "payu+74@ciklum.com";
     String first_name = "74 test";
     String last_name = "test";
-    String password = "";
+    String password = "Qwerty123456";
     String company_name = "74 test company";
     String country = "Germany";
     String message = "Invalid username or password";
-    String sender = "";
+    String sender = "olsav@ciklum.com";
 
     @BeforeTest
     public void openLoginPage() {
@@ -48,7 +48,13 @@ public class RegisterCompanyTest extends BaseTest {
     @Test(priority = 1, enabled = false)
     public void registerCompany() {
         RegistrationPage registrationPage = new RegistrationPage();
-        registrationSuccessfulPage = registrationPage.createCompany(email, first_name, last_name, password, company_name, country);
+        registrationSuccessfulPage = registrationPage.createCompany(
+                email,
+                first_name,
+                last_name,
+                password,
+                company_name,
+                country);
     }
 
     @Test(priority = 2, enabled = false)
@@ -67,6 +73,5 @@ public class RegisterCompanyTest extends BaseTest {
         inboxGmailPage.searchEmailBySender(sender);
         emailPage = inboxGmailPage.openEmail();
         emailPage.proccedByLink();
-
     }
 }

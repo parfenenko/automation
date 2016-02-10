@@ -50,4 +50,8 @@ public class BaseTest {
         driver.manage().window().maximize();
     }
 
+    public static void setChromeProperties(){
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\payu\\Downloads\\chromedriver.exe");
+    }
+
 }
