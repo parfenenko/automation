@@ -20,12 +20,13 @@ public class CreateCampaignTest extends BaseTest{
     String homePageUrlDemo = "http://demo.mrlight.pp.ciklum.com/";
     String login = "payu+prod1@ciklum.com";
     String password = "Qwerty123456";
-    String myCampaingsUrl = "/campaign/list";
+    String myCampaingsUrl = "campaign/list";
 
     @BeforeTest
     public void openLoginPage() {
+        setChromeProperties();
         openBrowser();
-        openPage(homePageUrlProd);
+        openPage(homePageUrlDemo);
     }
 
     @AfterTest
@@ -37,7 +38,8 @@ public class CreateCampaignTest extends BaseTest{
     public void createSimpleCampaign(){
         LoginPage loginPage = new LoginPage();
         dashboardPage = loginPage.login(login, password);
-//        myCampaignsPage = dashboardPage.navigateTo(myCampaingsUrl);
+        openPage(homePageUrlDemo + myCampaingsUrl);
+//        myCampaignsPage.();
 //        myCampaignsPage.openCreateMyCampaignsPage();
 
 
