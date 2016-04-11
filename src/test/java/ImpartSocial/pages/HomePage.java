@@ -20,8 +20,15 @@ public class HomePage extends BasePage {
         clickOn(Locators.SUBMIT_REQUEST_BUTTON);
     }
 
+    public CoursePage clickProceedToCoursePage() {
+        clickOn(Locators.VIEW_COURSE_BUTTON);
+        return new CoursePage();
+    }
+
     public interface Locators {
         By PAGE_LOCATOR = By.cssSelector(".title--main");
+        By VIEW_COURSE_BUTTON = By.cssSelector(".button--default");
+
         By NAME = By.xpath("//input[@placeholder='Name']");
         By PHONE_NUMBER = By.xpath("//input[@placeholder='Phone number']");
         By COMPANY = By.xpath("//input[contains(@placeholder,'Company')]");
